@@ -16,7 +16,8 @@
 % 普通A4格式缩进
 % \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 % 论文标准缩进
-\geometry{left=1.25in,right=1.25in,top=1in,bottom=1.5in}
+%\geometry{left=1.25in,right=1.25in,top=1in,bottom=1.5in}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
 %------------------------------------------------------------------------------%
 
 
@@ -157,7 +158,8 @@
 \XeTeXlinebreakskip = 0pt plus 1pt              % 调整换行逻辑的弹性大小
 \usepackage{indentfirst}                        % 段首空格设置
 \setlength{\parindent}{26pt}                    % 段首空格长度
-\setlength{\parskip}{3pt plus 1pt minus 1pt}    % 段落间距
+%\setlength{\parskip}{3pt plus 1pt minus 1pt}
+\setlength{\parskip}{0pt}    % 段落间距，于具体内容进行动态调整
 \renewcommand{\baselinestretch}{1.25}           % 行距
 %------------------------------------------------------------------------------%
 
@@ -175,9 +177,9 @@
 \newcommand{\keywords}[1]{\\ \\ \textbf{关~键~词}：#1}
 
 
-\titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei\bf}%
+\titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei\bf}%大标题三号黑
 {\sSanhao{\chaptertitlename}}{20pt}{\sSanhao}
-\titleformat{\section}[hang]{\fHei \bf \sSihao}%
+\titleformat{\section}[hang]{\fHei \bf \sSihao} %小标题四号黑
 {\sXiaosan \thesection}{0.5em}{}{}
 \titleformat{\subsection}[hang]{\fHei \bf \sLargeHalfXiaosi}%
 {\sLargeHalfXiaosi \thesubsection}{0.5em}{}{}
@@ -204,9 +206,9 @@
 %---------------------------------设置页眉页脚---------------------------------%
 \usepackage{fancyhdr}
 \usepackage{fancyref}
-%\addtolength{\headsep}{-0.1cm}          %页眉位置
-%\addtolength{\footskip}{-0.1cm}         %页脚位置
-\addtolength{\topmargin}{0.5cm}
+\addtolength{\headsep}{-0.1cm}          %页眉位置
+\addtolength{\footskip}{-0.1cm}         %页脚位置
+\addtolength{\topmargin}{-0.5cm}        %仍需调整
 \newcommand{\makeheadrule}{
     \makebox[0pt][l]{\rule[.7\baselineskip]{\headwidth}{0.8pt}}
     \vskip-.8\baselineskip
@@ -219,7 +221,7 @@
 \fancyfoot[C,C]{\sWuhao-~\thepage~-}
 % 后续文字可以自行修改
 \chead{\sSanhao\raisebox{0.04cm}%
-    {　\fNWPU 西北工业大学} \fSong{{\textbf{本科毕业设计（论文）}　}}}
+    {\fNWPU 西北工业大学} \fSong{{\textbf{本科毕业设计（论文）}}}}
 %------------------------------------------------------------------------------%
 
 
